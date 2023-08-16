@@ -1,0 +1,131 @@
+.universities-grid {
+  display: grid;
+  background-color: #272829;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 50px;
+}
+
+.custom {
+  background-color: coral !important;
+}
+
+.university-container {
+  width: 300px;
+  height: 360px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.uni-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.uni-card:hover {
+  transform: rotateY(180deg);
+}
+
+.front-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.back-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: black;
+  border-radius: 15px;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.custom-name {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.details-header {
+  text-align: right;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.uni-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.uni-name {
+  position: absolute;
+  color: white;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.uni-details {
+  text-align: right;
+  font-weight: bold;
+}
+
+.details-button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .universities-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* @media (min-width: 960px) {
+  .universities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .universities-grid {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+  }
+}  */
